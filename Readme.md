@@ -1,3 +1,12 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [HomeController.cs](./CS/GridViewBatchEdit/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/GridViewBatchEdit/Controllers/HomeController.vb))
+* [Model.cs](./CS/GridViewBatchEdit/Models/Model.cs) (VB: [Model.vb](./VB/GridViewBatchEdit/Models/Model.vb))
+* [AjaxLogin.js](./CS/GridViewBatchEdit/Scripts/AjaxLogin.js) (VB: [AjaxLogin.js](./VB/GridViewBatchEdit/Scripts/AjaxLogin.js))
+* [_GridViewPartial.cshtml](./CS/GridViewBatchEdit/Views/Home/_GridViewPartial.cshtml)
+* **[Index.cshtml](./CS/GridViewBatchEdit/Views/Home/Index.cshtml)**
+<!-- default file list end -->
 # GridView - Batch Editing - A simple implementation of an EditItem template
 
 
