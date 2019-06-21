@@ -8,6 +8,9 @@
 * **[Index.cshtml](./CS/GridViewBatchEdit/Views/Home/Index.cshtml)**
 <!-- default file list end -->
 # GridView - Batch Editing - A simple implementation of an EditItem template
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/t115130)**
+<!-- run online end -->
 
 
 <p>This example demonstrates how to create a custom editor inside column's DataItem template when GridView is in Batch Edit mode.<br><br></p>
