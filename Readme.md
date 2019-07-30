@@ -9,7 +9,7 @@
 <!-- default file list end -->
 # GridView - Batch Editing - A simple implementation of an EditItem template
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t115130)**
+**[[Run Online]](https://codecentral.devexpress.com/t115130/)**
 <!-- run online end -->
 
 
