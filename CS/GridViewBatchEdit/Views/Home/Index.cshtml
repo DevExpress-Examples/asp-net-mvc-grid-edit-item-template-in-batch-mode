@@ -6,7 +6,7 @@
             var cellInfo = e.rowValues[templateColumn.index];
             C1spinEdit.SetValue(cellInfo.value);
             if (e.focusedColumn === templateColumn)
-                C1spinEdit.SetFocus();
+                C1spinEdit.Focus();
         }
         function Grid_BatchEditEndEditing(s, e) {
             var templateColumn = s.GetColumnByField("C1");

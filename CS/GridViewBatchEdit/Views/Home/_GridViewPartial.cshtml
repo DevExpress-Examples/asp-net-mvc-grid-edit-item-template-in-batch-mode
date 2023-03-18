@@ -10,7 +10,7 @@
         settings.CommandColumn.ShowDeleteButton = true;
         settings.CommandColumn.ShowNewButtonInHeader = true;
 
-        settings.Width = 800;
+        settings.Width = 600;
         settings.KeyFieldName = "ID";
 
         settings.Columns.Add(column =>
@@ -32,7 +32,7 @@
 
         settings.Columns.Add(column =>
         {
-            
+
             column.FieldName = "C2";
             column.Width = 100;
             column.ColumnType = MVCxGridViewColumnType.SpinEdit;
@@ -62,7 +62,8 @@
             editor.ValidationSettings.Display = Display.Dynamic;
         };
     });
-    if (ViewData["EditError"] != null) {
+    if (ViewData["EditError"] != null)
+    {
         grid.SetEditErrorText((string)ViewData["EditError"]);
     }
 }
