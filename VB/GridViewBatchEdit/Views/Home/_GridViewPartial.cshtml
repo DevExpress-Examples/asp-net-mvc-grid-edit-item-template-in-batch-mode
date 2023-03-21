@@ -1,0 +1,70 @@
+@{
+    var grid = Html.DevExpress().GridView(settings =>
+    {
+        settings.Name = "grid";
+        settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewPartial" };
+        settings.SettingsEditing.BatchUpdateRouteValues = new { Controller = "Home", Action = "BatchUpdatePartial" };
+        settings.SettingsEditing.Mode = GridViewEditingMode.Batch;
+
+        settings.CommandColumn.Visible = true;
+        settings.CommandColumn.ShowDeleteButton = true;
+        settings.CommandColumn.ShowNewButtonInHeader = true;
+
+        settings.Width = 600;
+        settings.KeyFieldName = "ID";
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "C1";
+            column.Width = 100;
+            column.SetEditItemTemplateContent(c =>
+            {
+                @Html.DevExpress().SpinEdit(spinSettings =>
+                {
+                    spinSettings.Name = "C1spinEdit";
+
+                    spinSettings.Width = System.Web.UI.WebControls.Unit.Percentage(100);
+                    spinSettings.Properties.ClientSideEvents.KeyDown = "C1spinEdit_KeyDown";
+                    spinSettings.Properties.ClientSideEvents.LostFocus = "C1spinEdit_LostFocus";
+                }).Render();
+            });
+        });
+
+        settings.Columns.Add(column =>
+        {
+
+            column.FieldName = "C2";
+            column.Width = 100;
+            column.ColumnType = MVCxGridViewColumnType.SpinEdit;
+        });
+        settings.Columns.Add("C3").Width = 120;
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "C4";
+            column.ColumnType = MVCxGridViewColumnType.CheckBox;
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "C5";
+            column.Width = 150;
+            column.ColumnType = MVCxGridViewColumnType.DateEdit;
+        });
+
+
+        settings.ClientSideEvents.BatchEditStartEditing = "Grid_BatchEditStartEditing";
+        settings.ClientSideEvents.BatchEditEndEditing = "Grid_BatchEditEndEditing";
+        settings.ClientSideEvents.BatchEditRowValidating = "Grid_BatchEditRowValidating";
+
+
+        settings.CellEditorInitialize = (s, e) =>
+        {
+            ASPxEdit editor = (ASPxEdit)e.Editor;
+            editor.ValidationSettings.Display = Display.Dynamic;
+        };
+    });
+    if (ViewData["EditError"] != null)
+    {
+        grid.SetEditErrorText((string)ViewData["EditError"]);
+    }
+}
+@grid.Bind(Model).GetHtml()
