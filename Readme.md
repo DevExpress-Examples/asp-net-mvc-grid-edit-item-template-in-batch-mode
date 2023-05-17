@@ -30,7 +30,7 @@ Follow the steps below:
     });
     ```
 
-2. Handle the grid's client-side [BatchEditStartEditing](https://docs.devexpress.devx/AspNet/js-ASPxClientGridView.BatchEditStartEditing) event and do the following in the handler:
+2. Handle the grid's client-side [BatchEditStartEditing](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.BatchEditStartEditing) event and do the following in the handler:
 
    * Use the [rowValues](https://docs.devexpress.com/AspNet/js-ASPxClientGridViewBatchEditStartEditingEventArgs.rowValues) argument property to get the value of the processed cell.
    * Call the editor's `SetValue` method to assign the cell value to the editor.
