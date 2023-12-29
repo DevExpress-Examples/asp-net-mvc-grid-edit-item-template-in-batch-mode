@@ -4,9 +4,6 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 # Grid View for ASP.NET MVC - How to implement an edit item template in batch mode
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128549583/)**
-<!-- run online end -->
 
 This example demonstrates how to create an edit item template, add an editor to the template, and configure the grid's cell edit functionality in batch mode.
 
